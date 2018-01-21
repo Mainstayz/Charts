@@ -33,4 +33,19 @@ public protocol ILineScatterCandleRadarChartDataSet: IBarLineScatterCandleBubble
     /// Enables / disables both vertical and horizontal highlight-indicators.
     /// :param: enabled
     func setDrawHighlightIndicators(_ enabled: Bool)
+    
+    /// The radius of the drawn circles.
+    var highlightIndicatorsCenterCircleRadius: CGFloat { get set }
+    
+    var highlightIndicatorsCenterCircleColors: NSUIColor { get set }
+    
+    /// Sets the one and ONLY color that should be used for this DataSet.
+    /// Internally, this recreates the colors array and adds the specified color.
+    func setHighlightIndicatorsCenterCircleColor(_ color: NSUIColor)
+    
+    /// If true, drawing circles is enabled
+    var drawHighlightIndicatorsCenterCircleEnabled: Bool { get set }
+    
+    /// - returns: `true` if drawing circles for this DataSet is enabled, `false` ifnot
+    var isDrawHighlightIndicatorsCenterCircleEnabled: Bool { get }
 }
