@@ -38,6 +38,20 @@ open class LineScatterCandleRadarChartDataSet: BarLineScatterCandleBubbleChartDa
         drawVerticalHighlightIndicatorEnabled = enabled
     }
     
+    open var highlightIndicatorsCenterCircleRadius: CGFloat = 2.0
+    
+    open var highlightIndicatorsCenterCircleColors: NSUIColor = NSUIColor(red: 255.0/255.0, green: 187.0/255.0, blue: 115.0/255.0, alpha: 1.0)
+    
+    open func setHighlightIndicatorsCenterCircleColor(_ color: NSUIColor) {
+        highlightIndicatorsCenterCircleColors = color
+    }
+    
+    open var drawHighlightIndicatorsCenterCircleEnabled = false
+    open var isDrawHighlightIndicatorsCenterCircleEnabled: Bool{
+        return drawHighlightIndicatorsCenterCircleEnabled
+    }
+
+    
     // MARK: NSCopying
     
     open override func copyWithZone(_ zone: NSZone?) -> AnyObject
@@ -45,6 +59,10 @@ open class LineScatterCandleRadarChartDataSet: BarLineScatterCandleBubbleChartDa
         let copy = super.copyWithZone(zone) as! LineScatterCandleRadarChartDataSet
         copy.drawHorizontalHighlightIndicatorEnabled = drawHorizontalHighlightIndicatorEnabled
         copy.drawVerticalHighlightIndicatorEnabled = drawVerticalHighlightIndicatorEnabled
+        
+        copy.highlightIndicatorsCenterCircleRadius = highlightIndicatorsCenterCircleRadius
+        copy.highlightIndicatorsCenterCircleColors = highlightIndicatorsCenterCircleColors
+        copy.drawHighlightIndicatorsCenterCircleEnabled = drawHighlightIndicatorsCenterCircleEnabled
         return copy
     }
     
