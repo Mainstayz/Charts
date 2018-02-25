@@ -224,10 +224,11 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         renderer.drawData(context: context)
         
         // if highlighting is enabled
-        if (valuesToHighlight())
+        if (valuesToHighlight() && isDrawHighlightLinesBehindDataEnabled)
         {
             renderer.drawHighlighted(context: context, indices: _indicesToHighlight)
         }
+
         
         context.restoreGState()
         
@@ -246,6 +247,11 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         if rightAxis.isEnabled && !rightAxis.isDrawLimitLinesBehindDataEnabled
         {
             rightYAxisRenderer.renderLimitLines(context: context)
+        }
+        
+        if (valuesToHighlight() && !isDrawHighlightLinesBehindDataEnabled)
+        {
+            renderer.drawHighlighted(context: context, indices: _indicesToHighlight)
         }
         
         xAxisRenderer.renderAxisLabels(context: context)
