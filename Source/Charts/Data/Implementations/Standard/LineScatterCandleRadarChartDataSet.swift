@@ -40,10 +40,10 @@ open class LineScatterCandleRadarChartDataSet: BarLineScatterCandleBubbleChartDa
     
     open var highlightIndicatorsCenterCircleRadius: CGFloat = 2.0
     
-    open var highlightIndicatorsCenterCircleColors: NSUIColor = NSUIColor(red: 255.0/255.0, green: 187.0/255.0, blue: 115.0/255.0, alpha: 1.0)
+    open var highlightIndicatorsCenterCircleColor: NSUIColor = NSUIColor(red: 255.0/255.0, green: 187.0/255.0, blue: 115.0/255.0, alpha: 1.0)
     
     open func setHighlightIndicatorsCenterCircleColor(_ color: NSUIColor) {
-        highlightIndicatorsCenterCircleColors = color
+        highlightIndicatorsCenterCircleColor = color
     }
     
     open var drawHighlightIndicatorsCenterCircleEnabled = false
@@ -61,7 +61,7 @@ open class LineScatterCandleRadarChartDataSet: BarLineScatterCandleBubbleChartDa
         copy.drawVerticalHighlightIndicatorEnabled = drawVerticalHighlightIndicatorEnabled
         
         copy.highlightIndicatorsCenterCircleRadius = highlightIndicatorsCenterCircleRadius
-        copy.highlightIndicatorsCenterCircleColors = highlightIndicatorsCenterCircleColors
+        copy.highlightIndicatorsCenterCircleColor = highlightIndicatorsCenterCircleColor
         copy.drawHighlightIndicatorsCenterCircleEnabled = drawHighlightIndicatorsCenterCircleEnabled
         return copy
     }
