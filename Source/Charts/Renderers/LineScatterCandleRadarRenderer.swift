@@ -49,7 +49,7 @@ open class LineScatterCandleRadarRenderer: BarLineScatterCandleBubbleRenderer
         if set.isDrawHighlightIndicatorsCenterCircleEnabled{
             context.beginPath()
             context.addArc(center: point, radius: set.highlightIndicatorsCenterCircleRadius, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: false)
-            context.setFillColor(set.highlightIndicatorsCenterCircleColors.cgColor)
+            context.setFillColor(set.highlightIndicatorsCenterCircleColor.cgColor)
             context.drawPath(using: .fill)
             context .strokePath()
         }
