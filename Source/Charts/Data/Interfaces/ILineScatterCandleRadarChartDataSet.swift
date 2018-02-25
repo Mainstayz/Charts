@@ -37,7 +37,7 @@ public protocol ILineScatterCandleRadarChartDataSet: IBarLineScatterCandleBubble
     /// The radius of the drawn circles.
     var highlightIndicatorsCenterCircleRadius: CGFloat { get set }
     
-    var highlightIndicatorsCenterCircleColors: NSUIColor { get set }
+    var highlightIndicatorsCenterCircleColor: NSUIColor { get set }
     
     /// Sets the one and ONLY color that should be used for this DataSet.
     /// Internally, this recreates the colors array and adds the specified color.
