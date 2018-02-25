@@ -140,6 +140,10 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         extraBottomOffset = bottom
     }
     
+    @objc open var drawHighlightLinesBehindDataEnabled = true
+    
+    @objc open var isDrawHighlightLinesBehindDataEnabled: Bool { return drawHighlightLinesBehindDataEnabled }
+
     // MARK: - Initializers
     
     public override init(frame: CGRect)
