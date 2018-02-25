@@ -39,10 +39,6 @@ public protocol ILineScatterCandleRadarChartDataSet: IBarLineScatterCandleBubble
     
     var highlightIndicatorsCenterCircleColor: NSUIColor { get set }
     
-    /// Sets the one and ONLY color that should be used for this DataSet.
-    /// Internally, this recreates the colors array and adds the specified color.
-    func setHighlightIndicatorsCenterCircleColor(_ color: NSUIColor)
-    
     /// If true, drawing circles is enabled
     var drawHighlightIndicatorsCenterCircleEnabled: Bool { get set }
     
